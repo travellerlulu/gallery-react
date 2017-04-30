@@ -1,17 +1,17 @@
 [
   {
     "imgUrl": "../images/1.jpg",
-    "title": "1",
+    "title": "Title 1",
     "des": "Here he comes"
   },
   {
     "imgUrl": "../images/2.jpg",
-    "title": "2",
+    "title": "Title 2",
     "des": "Here he comes"
   },
   {
     "imgUrl": "../images/3.jpg",
-    "title": "3",
+    "title": "Title 3",
     "des": "Here he comes"
   },
   {
@@ -31,22 +31,22 @@
   },
   {
     "imgUrl": "../images/7.jpg",
-    "title": "7",
+    "title": "Title 7",
     "des": "Here he comes"
   },
   {
     "imgUrl": "../images/8.jpg",
-    "title": "8",
+    "title": "Title 8",
     "des": "Here he comes"
   },
   {
     "imgUrl": "../images/9.jpg",
-    "title": "9",
+    "title": "Title 9",
     "des": "Here he comes"
   },
   {
     "imgUrl": "../images/10.jpg",
-    "title": "10",
+    "title": "Title 10",
     "des": "Here he comes"
   }
 ]

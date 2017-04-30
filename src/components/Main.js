@@ -1,3 +1,6 @@
+/**
+ * Created by bailu on 2017/4/30.
+ */
 require('normalize.css/normalize.css');
 require('styles/App.scss');
 
