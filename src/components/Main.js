@@ -27,7 +27,7 @@ class ImgFigure extends React.Component {
         styleObj[value + 'Transform'] = 'rotate(' + this.props.arrange.rotate + 'deg)';
       })
     }
-    if(this.props.arrange.isCenter) {
+    if (this.props.arrange.isCenter) {
       styleObj.zIndex = 11;
     }
     let imgClassName = 'img-figure';
@@ -42,6 +42,25 @@ class ImgFigure extends React.Component {
           </div>
         </figcaption>
       </figure>
+    )
+  }
+}
+
+class ControllerUnit extends React.Component {
+  handleClick() {
+    if(this.props.arrange.isCenter) {
+      this.props.inverse();
+    } else {
+      this.props.center();
+    }
+  }
+  render() {
+    let cls = 'controller-unit',
+      arrange = this.props.arrange;
+    cls += arrange.isCenter ? ' isCenter' : '';
+    cls += arrange.isInverse ? ' is-inverse' : '';
+    return (
+      <span className={cls} onClick={this.handleClick.bind(this)}></span>
     )
   }
 }
@@ -225,7 +244,11 @@ class GalleryByReact extends React.Component {
       imgFigures.push(<ImgFigure data={value} key={index} ref={r => this.child = r}
                                  arrange={this.state.imgsArrangeArr[index]} inverse={() => {
         this.inverse(index)
-      }} center={() => {this.center(index)}}/>);
+      }} center={() => {
+        this.center(index)
+      }}/>);
+      controllerUnits.push(<ControllerUnit key={index} arrange={this.state.imgsArrangeArr[index]} center={() => {
+        this.center(index)}} inverse={() => {this.inverse(index)}}/>);
     });
     return (
       <section className="stage" ref="stage">

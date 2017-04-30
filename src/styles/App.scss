@@ -78,4 +78,30 @@ html, body {
   width: 100%;
   z-index: 101;
   text-align: center;
+  .controller-unit {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: #aaa;
+    color: #fff;
+    transform: scale(.5);
+    transition: transform .6s ease-in-out, background-color .3s ease;
+    &.isCenter {
+      transform: scale(1);
+      background-color: #888;
+      &:after {
+        content: 'Z';
+      }
+      &.is-inverse {
+        transform: rotate(180deg);
+        background-color: #555;
+      }
+    }
+  }
 }
